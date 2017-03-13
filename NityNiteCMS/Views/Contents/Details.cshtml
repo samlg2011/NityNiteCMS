@@ -1,0 +1,92 @@
+﻿@model BusinessEntities.Content
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_cms.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Content</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageSubTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageSubTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageContent1Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageContent1Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageContent1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageContent1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageContent2Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageContent2Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageContent2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageContent2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageContent3Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageContent3Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageContent3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageContent3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PageId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

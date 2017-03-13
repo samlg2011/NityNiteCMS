@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    class ContentStatus
+    public enum ContentStatus
     {
+        BaseLevelPage,
+        SecondLevelSubPage,
+        ThirdLevelSubPage
     }
 }

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{F70252DD-AB34-4664-B099-3BE3492B4C1B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{700348DB-D4FA-4B1A-8B7F-983234211ED6}"
+	ProjectSection(SolutionItems) = preProject
+		NityNiteCMSBootstrap\Models\IdentityModels.cs = NityNiteCMSBootstrap\Models\IdentityModels.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View And Controller", "View And Controller", "{CF7FBEED-8535-4F23-8E0A-7872309B2115}"
 EndProject
@@ -16,6 +19,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{2177E823-EF62-45BE-9143-D037C1710C9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{8FD385C1-FE87-4F39-AEBA-B98660E0C8B1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2177E823-EF62-45BE-9143-D037C1710C9F} = {2177E823-EF62-45BE-9143-D037C1710C9F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{A9828224-4C46-4498-90DF-D1B11D18B852}"
 EndProject

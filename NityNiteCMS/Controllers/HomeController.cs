@@ -3,27 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BusinessEntities;
+using BusinessLayer;
+using DataAccessLayer;
+using ViewModel;
 
-namespace NityNiteCMS.Controllers
+namespace NityNiteCMSBootstrap.Controllers
 {
     public class HomeController : Controller
     {
+        private ContentBussinessLayer contentBL = new ContentBussinessLayer();
+        private CMSDBDAL cmsDal = new CMSDBDAL();
         public ActionResult Index()
         {
-            return View();
+            if (contentBL.CheckExistPage("Index"))
+            {
+                return View("Index", contentBL.FindPage("Index"));
+            }
+            else
+            {
+                return new EmptyResult();
+            }
         }
-
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            if(contentBL.CheckExistPage("About"))
+            {
+                return View("About", contentBL.FindPage("About"));
+            }else
+            {
+                return new EmptyResult();
+            }
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
+            if (contentBL.CheckExistPage("Contact"))
+            {
+                return View("Contact", contentBL.FindPage("Contact"));
+            }
+            else
+            {
+                return new EmptyResult();
+            }
+        }
+        public ActionResult Blog()
+        {
             return View();
         }
     }
