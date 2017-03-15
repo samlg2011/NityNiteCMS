@@ -53,9 +53,9 @@ SQL Server 2015
           |-- ViewModel
               |-- AccountViewModels.cs        # Authentication functions
               |-- EmployeeViewModel.cs        # Used for restructure data for views, such as combine firstname and lastname into name
-              |-- ContentViewModel.cs         
-              |-- CustomerViewModel.cs        
-              |-- ProductViewModel.cs         
+              |-- ContentViewModel.cs         # ...
+              |-- CustomerViewModel.cs        # ...
+              |-- ProductViewModel.cs         # ...
 
 ## History
 Current release: including basic functions, a working example. Lots of more might be needed for real life situation. However, as long as following this basic structure, the project can be extended as big as possible.
