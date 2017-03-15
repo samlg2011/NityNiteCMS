@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace NityNiteCMSBootstrap.ViewModels
+namespace ViewModel
 {
-
     public class ExternalLoginConfirmationViewModel
     {
         [Required]

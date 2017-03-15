@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthBusinessLayer.cs" />
     <Compile Include="BusinessSettings.cs" />
     <Compile Include="ContentBussinessLayer.cs" />
     <Compile Include="CustomerBusinessLayer.cs" />

@@ -20,12 +20,14 @@ namespace NityNiteCMS.Controllers
         private EmployeeBusinessLayer empBL = new EmployeeBusinessLayer();
 
         // GET: Employees
+        [Authorize]
         public ActionResult Index()
         {
             return View("Index", empVM.GetEmployeeViewModelList());
         }
 
         // GET: Employees/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -41,10 +43,12 @@ namespace NityNiteCMS.Controllers
         }
 
         // GET: Employees/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "EmployeeId,FirstName,LastName,SIN,EmployeeType,EmployeeStartDate,EmployeeEndDate,EmployeePhone,EmployeeMobile,EmployeeStreetNum,EmployeeStreetName,EmployeeProvince,EmployeePostCode,EmployeeSalary")] Employee employee)
@@ -59,6 +63,7 @@ namespace NityNiteCMS.Controllers
         }
 
         // GET: Employees/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -72,6 +77,7 @@ namespace NityNiteCMS.Controllers
             }
             return View(employee);
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "EmployeeId,FirstName,LastName,SIN,EmployeeType,EmployeeStartDate,EmployeeEndDate,EmployeePhone,EmployeeMobile,EmployeeStreetNum,EmployeeStreetName,EmployeeProvince,EmployeePostCode,EmployeeSalary")] Employee employee)
@@ -85,6 +91,7 @@ namespace NityNiteCMS.Controllers
         }
 
         // GET: Employees/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -100,6 +107,7 @@ namespace NityNiteCMS.Controllers
         }
 
         // POST: Employees/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -20,12 +20,14 @@ namespace NityNiteCMS.Controllers
         ContentBussinessLayer contentBL = new ContentBussinessLayer();
 
         // GET: Contents
+        [Authorize]
         public ActionResult Index()
         {
             return View("Index", contentBL.GetPage());
         }
 
         // GET: Contents/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -41,10 +43,12 @@ namespace NityNiteCMS.Controllers
         }
 
         // GET: Contents/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "PageId,PageName,PageTitle,PageSubTitle,PageLevel,PageContent1Title,PageContent1,PageContent2Title,PageContent2,PageContent3Title,PageContent3")] Content content)
@@ -59,6 +63,7 @@ namespace NityNiteCMS.Controllers
         }
 
         // GET: Contents/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -72,6 +77,7 @@ namespace NityNiteCMS.Controllers
             }
             return View(content);
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "PageId,PageName,PageTitle,PageSubTitle,PageLevel,PageContent1Title,PageContent1,PageContent2Title,PageContent2,PageContent3Title,PageContent3")] Content content)
@@ -85,6 +91,7 @@ namespace NityNiteCMS.Controllers
         }
 
         // GET: Contents/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -100,6 +107,7 @@ namespace NityNiteCMS.Controllers
         }
 
         // POST: Contents/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

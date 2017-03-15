@@ -176,6 +176,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth.cs" />
     <Compile Include="BillingMethod.cs" />
     <Compile Include="Content.cs" />
     <Compile Include="ContentStatus.cs" />

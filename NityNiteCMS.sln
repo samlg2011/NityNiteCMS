@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{F70252DD-AB34-4664-B099-3BE3492B4C1B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{700348DB-D4FA-4B1A-8B7F-983234211ED6}"
-	ProjectSection(SolutionItems) = preProject
-		NityNiteCMSBootstrap\Models\IdentityModels.cs = NityNiteCMSBootstrap\Models\IdentityModels.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View And Controller", "View And Controller", "{CF7FBEED-8535-4F23-8E0A-7872309B2115}"
 EndProject
