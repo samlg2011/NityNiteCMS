@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using NityNiteCMS.Filters;
 
 namespace NityNiteCMS
 {
@@ -7,7 +8,7 @@ namespace NityNiteCMS
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new CustomExceptionFilter());
         }
     }
 }
