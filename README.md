@@ -8,7 +8,7 @@ Sample CMS Using C# .Net MVC and Entity Framework
 1. page content management (http://url/Content/), using backend management to maintain page content
 2. backend system for employee, client, product (http://url/Employee, http://url/Customer, http://url/Product)
 3. modify web.config to your own connection string, code-first entity will create tables automatic.
-4. Menually create admin user with authentication type 0
+4. Menually insert into admin user with authentication type 0 into database.
 5. direct to http://url/Content/, login, create index, about, contact page.
 
 ## Prerequisites
