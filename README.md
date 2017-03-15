@@ -7,10 +7,12 @@ Sample CMS Using C# .Net MVC and Entity Framework
 ## Usage
 1. page content management (http://url/Content/), using backend management to maintain page content
 2. backend system for employee, client, product (http://url/Employee, http://url/Customer, http://url/Product)
+3. modify web.config to your own connection string, code-first entity will create tables automatic.
 
 ## Prerequisites
 Microsoft Visual Studio 2016
-SQL Server 2015 (modify web.config to your own connection string)
+SQL Server 2015
+.Net Framework 4.5.2
 
 ## Structure
 <!-- language:console -->
@@ -24,7 +26,7 @@ SQL Server 2015 (modify web.config to your own connection string)
           |-- BusinessEntities
              |-- AuthStatus.cs              # enum of authentication
              |-- BillingMethod.cs           # enum of payment method
-             |-- Content.cs                 # class for page content business model, basic properties of page content
+             |-- Content.cs                 # class for page content business model
              |-- ContentStatus.cs           # enum of page type
              |-- Customer.cs                # class for customer business model
              |-- Employee.cs                # class for employee business model
@@ -32,20 +34,24 @@ SQL Server 2015 (modify web.config to your own connection string)
              |-- ProductCategorie.cs          # enum for product categories
           |-- BusinessLayer
              |-- BusinessSettings.cs          # Any global like business function will be putting here
-             |-- ContentBusinessLayer.cs      # Business layer for page content, check page exist, load page content, create, edit etc.
-             |-- CustomerBusinessLayer.cs     # Business layer for customer management for cms, create, edit, delete etc.
-             |-- EmployeeBusinessLayer.cs     # Business layer for employee management for cms, create, edit, delete etc.
-             |-- ProductBusinessLayer.cs      # Business layer for product management for cms, create, edit, delete etc.
+             |-- ContentBusinessLayer.cs      # Business layer for page content
+             |-- CustomerBusinessLayer.cs     # Business layer for customer management for cms
+             |-- EmployeeBusinessLayer.cs     # Business layer for employee management for cms
+             |-- ProductBusinessLayer.cs      # Business layer for product management for cms
         |-- View And Controller
              |-- ...                          # MVC auto generated structure
-             |-- ...                          ... view, controllers, config, global, filter etc...
+             |-- ...                          # ... view, controllers, config, global, filter etc...
+             |-- Filters                      # override default filters, exception filter, authentication filter etc...
+             |-- ...
+             |-- Log                          # Funtion to write exceptions into a local file (default location: c:\log\
+             |-- ...
         |-- View Models
           |-- ViewModel
               |-- AccountViewModels.cs        # Authentication functions
               |-- EmployeeViewModel.cs        # Used for restructure data for views, such as combine firstname and lastname into name
-              |-- ContentViewModel.cs         # Used for restructure data for views ...
-              |-- CustomerViewModel.cs        # Used for restructure data for views ...
-              |-- ProductViewModel.cs         # Used for restructure data for views ...
+              |-- ContentViewModel.cs         
+              |-- CustomerViewModel.cs        
+              |-- ProductViewModel.cs         
 
 ## History
 Current release: including basic functions, a working example. Lots of more might be needed for real life situation. However, as long as following this basic structure, the project can be extended as big as possible.
