@@ -8,6 +8,8 @@ Sample CMS Using C# .Net MVC and Entity Framework
 1. page content management (http://url/Content/), using backend management to maintain page content
 2. backend system for employee, client, product (http://url/Employee, http://url/Customer, http://url/Product)
 3. modify web.config to your own connection string, code-first entity will create tables automatic.
+4. Menually create admin user with authentication type 0
+5. direct to http://url/Content/, login, create index, about, contact page.
 
 ## Prerequisites
 Microsoft Visual Studio 2016
@@ -24,6 +26,7 @@ SQL Server 2015
             |-- DataBaseSettingse.cs        # Initiate setting database related
         |-- Models
           |-- BusinessEntities
+             |-- Auth.cs                    # Authentication business model
              |-- AuthStatus.cs              # enum of authentication
              |-- BillingMethod.cs           # enum of payment method
              |-- Content.cs                 # class for page content business model
@@ -33,6 +36,7 @@ SQL Server 2015
              |-- Product.cs                 # class for product business model
              |-- ProductCategorie.cs          # enum for product categories
           |-- BusinessLayer
+             |-- AuthBusinessLayer.cs         # Authentication business functions
              |-- BusinessSettings.cs          # Any global like business function will be putting here
              |-- ContentBusinessLayer.cs      # Business layer for page content
              |-- CustomerBusinessLayer.cs     # Business layer for customer management for cms
@@ -57,9 +61,8 @@ SQL Server 2015
 Current release: including basic functions, a working example. Lots of more might be needed for real life situation. However, as long as following this basic structure, the project can be extended as big as possible.
 
 ## Next release:
-1. Authentications
-2. Blogs
-3. Exception and error handling
+1. blog
+2. web api form
 
 ## Screen Shots:
 
